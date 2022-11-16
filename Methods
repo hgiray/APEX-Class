@@ -1,0 +1,43 @@
+public class Greeting {
+String firstName = 'Smith';
+public String fullName(){
+String lastName = 'Albert';
+String fName = firstName +' '+ lastName;
+return fName;
+}
+    public String greeting(){
+    String greeting = 'Hi';
+    String greet = (greeting +' '+ fullname());
+    return greet;
+}
+    public void greetingAll(List<String> nameList){
+    for (String hello : nameList){
+    System.debug('Hi '+ hello);
+}}
+    public void greetingAllButLast(List<String> nameList){
+    for (String test1 : nameList){
+    System.debug('Hi '+ test1.split(' ', 2)[0]);
+}}
+    public void greetingToSmith(List<String> nameList){
+    for (String test2 : nameList){
+    String test3 = test2.split(' ', 2)[0];
+    if (test3 == 'Smith'){
+    System.debug('Hi '+ test2.split(' ', 2)[0]);
+        }else {}
+    }}
+}
+9:26
+-----DEBUG SCREEN------
+9:26
+Greeting testName = new Greeting();
+// System.debug(testName.greeting());
+// System.debug(testName.fullname());
+List<String> nameList = New List<String>();
+nameList.add ('Murat Yilmaz');
+nameList.add ('Smith West');
+nameList.add ('Lucian John');
+nameList.add ('Bill David');
+nameList.add ('Maxwell Dreyfus');
+// testName.greetingAll(nameList);
+// testName.greetingAllButLast(nameList);
+testName.greetingToSmith(nameList);
